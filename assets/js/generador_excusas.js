@@ -1,35 +1,47 @@
 function generarNumeroAleatorio(indice_mayor) {
-    let numero_aleatorio = Math.random() * indice_mayor;
-    numero_aleatorio = Math.round(numero_aleatorio);
-    return numero_aleatorio;
-  }
-  
-  window.onload = function() {
-    let numero_aleatorio;
-    let who = ["The dog", "My grandma", "The mailman", "My bird"];
-    let action = ["ate", "peed", "crushed", "broke"];
-    let what = ["my homework", "my phone", "the car"];
-    let when = ["before the class", "when I was sleeping", "while I was exercising", "during my lunch", "while I was praying"];
-  
-    let elemento_html = document.querySelector("#excuse");
-    //alert(elemento_html);
-  
-    let indice_mayor_who = who.length - 1;
-    let primera_frase = who[generarNumeroAleatorio(indice_mayor_who)];
-  
-    //alert(indice_mayor_action);
-    let indice_mayor_action = action.length - 1;
-    let segunda_frase = action[generarNumeroAleatorio(indice_mayor_action)];
-  
-    //alert(indice_mayor_what);
-    let indice_mayor_what = what.length - 1;
-    let tercera_frase = what[generarNumeroAleatorio(indice_mayor_what)];
-  
-    //alert(indice_mayor_when);
-    let indice_mayor_when = when.length - 1;
-    let cuarta_frase = when[generarNumeroAleatorio(indice_mayor_when)];
-  
-    document.querySelector("#excuse").innerHTML = primera_frase + " " + segunda_frase + " " + tercera_frase + " " + cuarta_frase + " ";
-  };
-  
+  let numero_aleatorio = Math.random() * indice_mayor;
+  numero_aleatorio = Math.round(numero_aleatorio);
+  return numero_aleatorio;
+}
 
+window.onload = function () {
+  let numero_aleatorio;
+  let quien = ["El perro", "Mi abuela", "El cartero", "Mi pájaro"];
+  let accion = ["se comió", "orinó", "aplastó", "rompió"];
+  let que = ["mi tarea", "mi teléfono", "el coche"];
+  let cuando = [
+    "antes de la clase",
+    "cuando estaba durmiendo",
+    "mientras hacía ejercicio",
+    "durante mi almuerzo",
+    "mientras rezaba",
+  ];
+
+  let elemento_html = document.querySelector("#excuse");
+  //alert(elemento_html);
+
+  let indice_mayor_quien = quien.length - 1;
+  let primera_frase = quien[generarNumeroAleatorio(indice_mayor_quien)];
+
+  //alert(indice_mayor_accion);
+  let indice_mayor_accion = accion.length - 1;
+  let segunda_frase = accion[generarNumeroAleatorio(indice_mayor_accion)];
+
+  //alert(indice_mayor_que);
+  let indice_mayor_que = que.length - 1;
+  let tercera_frase = que[generarNumeroAleatorio(indice_mayor_que)];
+
+  //alert(indice_mayor_cuando);
+  let indice_mayor_cuando = cuando.length - 1;
+  let cuarta_frase = cuando[generarNumeroAleatorio(indice_mayor_cuando)];
+
+  document.querySelector("#excuse").innerHTML =
+    primera_frase +
+    " " +
+    segunda_frase +
+    " " +
+    tercera_frase +
+    " " +
+    cuarta_frase +
+    " ";
+};
